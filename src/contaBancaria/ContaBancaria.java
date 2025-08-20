@@ -28,9 +28,9 @@ public class ContaBancaria implements OperacoesConta{
     }
 
     @Override
-    public void transferir(String contaDestino, double valor) {
+    public void transferir(ContaBancaria destino, double valor) {
         sacar(valor);
-        if (contaDestino.equals(numeroConta)
+        destino.depositar(valor);
 
     }
 }

@@ -4,5 +4,5 @@ public interface OperacoesConta {
     void depositar(double saldo);
     void sacar(double saldo);
     double consultarSaldo();
-    void transferir(String contaDestino, double valor);
+    void transferir(ContaBancaria destino, double valor);
 }

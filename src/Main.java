@@ -25,9 +25,10 @@ public class Main {
         conta1.depositar(100);
         conta1.sacar(3);
         System.out.println(conta1.consultarSaldo());
-        conta1.transferir("2", 7);
+        conta1.transferir((ContaBancaria) conta2, 7);
         System.out.println(conta2.consultarSaldo());
         System.out.println(conta1.consultarSaldo());
+        System.out.println(conta2.consultarSaldo());
 
 
 
