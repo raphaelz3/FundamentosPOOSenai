@@ -1,7 +1,13 @@
+import Biblioteca.Livro;
+import Biblioteca.Revista;
 import contaBancaria.ContaBancaria;
 import contaBancaria.OperacoesConta;
 import produto.Exibivel;
 import produto.Produto;
+import tarefa.Concluivel;
+import tarefa.Tarefa;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,18 +24,29 @@ public class Main {
         //Produto
 //        Exibivel prod1 = new Produto("Caneta", 2.25, "teste");
 //        prod1.exibirDetalhes();
+//
+//        //Conta Bancaria
+//        OperacoesConta conta1 = new ContaBancaria("1", 0);
+//        OperacoesConta conta2 = new ContaBancaria("2", 0);
+//        conta1.depositar(100);
+//        conta1.sacar(3);
+//        conta1.transferir((ContaBancaria) conta2, 7);
+//        System.out.println("Saldo: " + conta1.consultarSaldo());
+//        System.out.println("Saldo: " + conta2.consultarSaldo());
 
-        //Conta Bancaria
-        OperacoesConta conta1 = new ContaBancaria("1", 0);
-        OperacoesConta conta2 = new ContaBancaria("2", 0);
-        conta1.depositar(100);
-        conta1.sacar(3);
-        System.out.println(conta1.consultarSaldo());
-        conta1.transferir((ContaBancaria) conta2, 7);
-        System.out.println(conta2.consultarSaldo());
-        System.out.println(conta1.consultarSaldo());
-        System.out.println(conta2.consultarSaldo());
+//         //Tarefas
+//        Tarefa tar1 = new Tarefa("Criar API");
+//        tar1.exibirStatus();
+//        tar1.concluir();
+//        tar1.exibirStatus();
+//        tar1.adicionarPrioridade(1);
+//        tar1.exibirStatus();
+//        tar1.concluir();
+//        tar1.exibirStatus();
 
+        //Catalogo de Biblioteca
+
+        Revista novo = new Revista("Sun Tzu", "Arte da Guerra", 1460);
 
 
     }

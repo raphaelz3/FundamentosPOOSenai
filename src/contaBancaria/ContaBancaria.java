@@ -1,7 +1,7 @@
 package contaBancaria;
 
 public class ContaBancaria implements OperacoesConta{
-    private String numeroConta;
+    public String numeroConta;
     private double saldo;
 
     public ContaBancaria(String numeroConta, double saldo) {
@@ -19,7 +19,7 @@ public class ContaBancaria implements OperacoesConta{
         if (saldo <= this.saldo)
             this.saldo -= saldo;
         else
-            System.out.println("Saldo Insuficiente.\n");
+            System.out.println(numeroConta + " Saldo Insuficiente.\n");
     }
 
     @Override
@@ -30,7 +30,10 @@ public class ContaBancaria implements OperacoesConta{
     @Override
     public void transferir(ContaBancaria destino, double valor) {
         sacar(valor);
-        destino.depositar(valor);
+        if (valor <= saldo)
+            destino.depositar(valor);
+        else
+            System.out.println("Sem Saldo para transferência.");
 
     }
 }
